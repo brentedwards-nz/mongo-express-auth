@@ -24,7 +24,7 @@ app.use("/api/data", dataRoutes);
 const server = http.createServer(app);
 
 // Mongoose
-const PORT = process.env.PORT || process.env.API_PORT;
+const PORT = process.env.PORT || process.env.API_PORT || 9001;
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
